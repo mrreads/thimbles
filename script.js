@@ -1,13 +1,11 @@
-var listObject = [];
+﻿var listObject = [];
 var globalCounter = 0;
 
 class Cup 
 {
     constructor(id) 
     {
-        this.withBall = false;
         document.querySelector('#wrapper').innerHTML += '<div id="' + id + '" class="cup"> </div>';
-
         listObject[globalCounter] = id;
         globalCounter++;
     }
