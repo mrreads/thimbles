@@ -1,0 +1,90 @@
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body
+{
+	width: 100%;
+	height: 100vh;
+}
+
+body
+{
+	background-image: url("./../img/background.jpg");
+	background-size: cover;
+}
+
+#wrapper
+{
+	display: flex;
+	align-content: center;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	min-height: 100%;
+}
+
+.cup
+{
+	position: relative;
+
+	display: flex;
+
+	min-width: 250px;
+	height: 250px;
+	margin: 25px 25px 50px 25px;
+
+	cursor: pointer;
+	transition: 0.3s all;
+
+	background-image: url("./../img/cup.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 70%;
+}
+
+.cup:hover
+{
+	background-position: center top;
+}
+
+.cup::after
+{
+	position: absolute;
+	z-index: -5;
+	bottom: -20px;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	content: "";
+
+	opacity: 0.6;
+	background-image: url("./../img/shadow.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 70%;
+}
+
+.ball
+{
+	position: absolute;
+	z-index: -1;
+	bottom: 0px;
+	left: 52%;
+
+	width: 150px;
+	height: 150px;
+
+	transform: translateX(-50%);
+
+	background-image: url("./../img/ball.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
+	background-size: 80%;
+}
